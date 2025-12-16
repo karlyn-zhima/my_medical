@@ -1,0 +1,64 @@
+{
+    "mysql":{
+        "host":"101.201.244.234",
+        "port":3306,
+        "database":"medical",
+        "username":"root",
+        "password":"20010903",
+        "charset":"utf8mb4"
+    },
+    "redis":{
+        "host":"101.201.244.234",
+        "port":6379,
+        "db":0,
+        "password":null,
+        "decode_responses":true,
+        "max_connections":10,
+        "retry_on_timeout":true,
+        "health_check_interval":30
+    },
+    "email":{
+        "smtp_server":"smtp.163.com",
+        "smtp_port":465,
+        "sender_email":"heng_yue_medical@163.com",
+        "sender_password":"XKS4U39cXUiFub7j",
+        "use_tls":false,
+        "use_ssl":true
+    },
+    "verification":{
+        "code_length":6,
+        "expire_minutes":10,
+        "max_attempts":3,
+        "resend_interval_seconds":60,
+        "rate_limit_seconds":60
+    },
+    "sms":{
+        "provider":"mock",
+        "aliyun":{
+            "access_key_id":"your_access_key_id",
+            "access_key_secret":"your_access_key_secret",
+            "sign_name":"您的应用",
+            "template_code":"SMS_123456789"
+        },
+        "tencent":{
+            "secret_id":"your_secret_id",
+            "secret_key":"your_secret_key",
+            "sms_sdk_app_id":"your_app_id",
+            "template_id":"123456",
+            "sign_name":"您的应用"
+        }
+    },
+    "paths":{
+        "rag_data_root":"rag_data"
+    },
+    "video_segmentation": {
+        "labels": [
+            {"id": "breast tumors", "name": "breast tumors", "description": "乳腺结节"},
+            {"id": "skin", "name": "skin", "description": "皮肤层"},
+            {"id": "fatty layer", "name": "fatty layer", "description": "脂肪层"},
+            {"id": "muscle", "name": "muscle", "description": "肌肉"},
+            {"id": "mammary gland", "name": "mammary gland", "description": "乳腺腺体"},
+            {"id": "thyroid nodule", "name": "thyroid nodule", "description": "甲状腺结节"}
+        ]
+    }
+}
